@@ -11,13 +11,19 @@ module.exports = function(gj, options) {
     [geojson.point(gj), geojson.line(gj), geojson.polygon(gj)]
         .forEach(function(l) {
         if (l.geometries.length && l.geometries[0].length) {
+            var geometries;
+            if(l.type==='POLYGON'){
+                geometries=l.geometries[0].map(e=>[e]);
+            }else{
+                geometries=l.geometries;
+            }
             write(
                 // field definitions
                 l.properties,
                 // geometry type
                 l.type,
                 // geometries
-                l.geometries,
+                geometries,
                 function(err, files) {
                     var fileName = options && options.types[l.type.toLowerCase()] ? options.types[l.type.toLowerCase()] : l.type;
                     layers.file(fileName + '.shp', files.shp.buffer, { binary: true });

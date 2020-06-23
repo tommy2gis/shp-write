@@ -1,5 +1,5 @@
 {
-  "name": "shp-write",
+  "name": "@tommy2gis/shp-write",
   "version": "0.3.2",
   "description": "write shapefiles from pure javascript",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mapbox/shp-write.git"
+    "url": "git://github.com/@tommy2gis/shp-write.git"
   },
   "files": [
     "index.js",
@@ -31,7 +31,7 @@
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/mapbox/shp-write/issues"
+    "url": "https://github.com/@tommy2gis/shp-write/issues"
   },
   "dependencies": {
     "dbf": "0.1.4",
