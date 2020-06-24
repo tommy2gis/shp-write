@@ -12,7 +12,7 @@ module.exports = function(gj, options) {
         .forEach(function(l) {
         if (l.geometries.length && l.geometries[0].length) {
             var geometries;
-            if(l.type==='POLYGON'){
+            if(l.type==='POLYGON'||l.type==='POLYLINE'){
                 geometries=l.geometries[0].map(e=>[e]);
             }else{
                 geometries=l.geometries;
