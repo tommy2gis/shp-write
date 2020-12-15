@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../shpwrite.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var options = {
+        folder: "myshapes",
+        types: {
+          point: "mypoints",
+          polygon: "mypolygons",
+          line: "mylines",
+        },
+      };
+      // a GeoJSON bridge for features
+      shpwrite.download(
+        {
+          type: "FeatureCollection",
+          features: [
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [0, 0],
+              },
+              properties: {
+                name: unescape(encodeURIComponent("中文")),
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [0, 10],
+              },
+              properties: {
+                name: "Bar",
+              },
+            },
+          ],
+        },
+        options
+      );
+    </script>
+  </body>
+</html>

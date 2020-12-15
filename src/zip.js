@@ -19,7 +19,7 @@ module.exports = function(gj, options) {
             }
             write(
                 // field definitions
-                l.properties,
+                JSON.parse(unescape(encodeURIComponent(JSON.stringify(l.properties)))),
                 // geometry type
                 l.type,
                 // geometries

@@ -1,6 +1,6 @@
 {
   "name": "@tommy2gis/shp-write",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "write shapefiles from pure javascript",
   "main": "index.js",
   "scripts": {
